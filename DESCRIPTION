@@ -1,0 +1,18 @@
+Type: Package
+Package: pipework
+Title: Create 'Plumber' Applications as Packages
+Version: 0.0.1
+Authors@R:
+    person("Jamie", "Owen", , "jamie@jumpingrivers.com", role = c("aut", "cre"))
+Description: Code generator for dependency-free 'Plumber' applications in the form
+    of packages.
+License: GPL (>= 2)
+Imports:
+    magrittr,
+    rlang
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+RoxygenNote: 7.1.2

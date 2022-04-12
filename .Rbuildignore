@@ -1,0 +1,12 @@
+^\.gitlab-ci\.yml$
+^\.lintr$
+^.*\.Rproj$
+^\.Rproj\.user$
+
+^_
+_files$
+
+^CONTRIBUTING\.md$
+^CODEOWNERS$
+docs
+/rsconnect/
