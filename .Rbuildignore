@@ -10,3 +10,5 @@ _files$
 ^CODEOWNERS$
 docs
 /rsconnect/
+^\.pipework$
+^\.github

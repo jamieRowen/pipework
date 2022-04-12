@@ -1,3 +1,10 @@
+# pipework 0.0.4 *2022-04-12*
+
+- feat: Utilities for detecting pipework project
+- feat: Function to add pipework lock file to build ignore
+- test: `is_pipework()`, `check_pipework()` and `build_ignore_pipework()`
+- fix: Bug in test helper (with_tmp_package)
+
 # pipework 0.0.3 *2022-04-12*
 
 - feat: Functionality to create .pipework lock file
