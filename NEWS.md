@@ -3,6 +3,7 @@
 - feat: Functionality to create .pipework lock file
 - feat: Test helpers for temporary package
 - test: Lock creation
+- build: GH Action for devtools test
 
 # pipework 0.0.1 *2022-04-12*
 
