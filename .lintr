@@ -1,13 +1,7 @@
 linters: with_defaults(
     line_length_linter(100),
     assignment_linter = NULL,
-    cyclocomp_linter(complexity_limit = 25), # default value
-    undesirable_operator_linter = undesirable_operator_linter(
-        with_defaults(
-                default_undesirable_operators,
-                "<-" = "Use =, not <-, for assignment."
-        )
-    )
+    cyclocomp_linter(complexity_limit = 25) # default value
   )
 exclusions: list(
     "^cache/"

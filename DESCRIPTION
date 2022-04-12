@@ -1,7 +1,7 @@
 Type: Package
 Package: pipework
 Title: Create 'Plumber' Applications as Packages
-Version: 0.0.4
+Version: 0.0.5
 Authors@R:
     person("Jamie", "Owen", , "jamie@jumpingrivers.com", role = c("aut", "cre"))
 Description: Code generator for dependency-free 'Plumber' applications in the form
@@ -9,6 +9,7 @@ Description: Code generator for dependency-free 'Plumber' applications in the fo
 License: GPL (>= 2)
 Imports:
     cli,
+    fs,
     jsonlite,
     magrittr,
     rlang
@@ -17,6 +18,7 @@ LazyData: true
 Suggests: 
     withr,
     testthat (>= 3.0.0),
-    purrr
+    purrr,
+    usethis
 Config/testthat/edition: 3
 RoxygenNote: 7.1.2
