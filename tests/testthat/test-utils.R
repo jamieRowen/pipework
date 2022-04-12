@@ -21,3 +21,8 @@ test_that("build ignore pipework", {
   x = readLines(ignore_file)
   expect_true("^\\.pipework$" %in% x)
 })
+
+test_that("template_file", {
+  expect_error(template_file("R", "fake.R"))
+  expect_type(template_file("R", "_generate_api.R"), "character")
+})

@@ -1,3 +1,9 @@
+# pipework 0.0.5 *2022-04-12*
+
+- feat: Functionality to copy templates to new package
+- feat: Add template for generate_api funcs
+- test: Test template copy
+
 # pipework 0.0.4 *2022-04-12*
 
 - feat: Utilities for detecting pipework project
