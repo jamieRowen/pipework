@@ -1,3 +1,8 @@
+# pipework 0.0.7 *2022-04-13*
+
+- feat: Functionality to create location for routes
+- test: Above feature
+
 # pipework 0.0.6 *2022-04-12*
 
 - feat: Functionality to copy templates to new package
