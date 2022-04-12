@@ -1,3 +1,7 @@
+# pipework 0.0.5 *2022-04-12*
+
+- build: Action for R package checks
+
 # pipework 0.0.4 *2022-04-12*
 
 - feat: Utilities for detecting pipework project
