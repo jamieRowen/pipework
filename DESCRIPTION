@@ -1,7 +1,7 @@
 Type: Package
 Package: pipework
 Title: Create 'Plumber' Applications as Packages
-Version: 0.0.1
+Version: 0.0.2
 Authors@R:
     person("Jamie", "Owen", , "jamie@jumpingrivers.com", role = c("aut", "cre"))
 Description: Code generator for dependency-free 'Plumber' applications in the form

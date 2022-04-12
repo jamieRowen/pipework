@@ -12,3 +12,4 @@ linters: with_defaults(
 exclusions: list(
     "^cache/"
   )
+error_on_lint: TRUE
