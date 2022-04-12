@@ -24,5 +24,5 @@ jobs:
         shell: Rscript {0}
 
       - name: test package
-        run: devtools::test()
+        run: devtools::test(stop_on_failure = TRUE)
         shell: Rscript {0}
