@@ -17,3 +17,7 @@ build_ignore_pipework = function() {
   check_pipework()
   usethis::use_build_ignore(LOCK_FILE)
 }
+
+template_file = function(...) {
+  system.file("template", ..., package = "pipework", mustWork = TRUE)
+}
