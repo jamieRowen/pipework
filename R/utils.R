@@ -21,3 +21,37 @@ build_ignore_pipework = function() {
 template_file = function(...) {
   system.file("template", ..., package = "pipework", mustWork = TRUE)
 }
+
+is_package = function() {
+  fs::file_exists("DESCRIPTION")
+}
+
+check_package = function() {
+  is = is_package()
+  if (is) {
+    return(invisible(TRUE))
+  }
+  stop(
+    "This does not look like a package project",
+    call. = FALSE
+  )
+}
+
+add_package = function(package, type = "Imports", ...) {
+  suppressMessages(
+    usethis::use_package(package, type, ...)
+  )
+  cli::cli_alert_success("Adding '{package}' to {type} in DESCRIPTION")
+}
+
+add_import = function(package, ...) {
+  add_package(package)
+}
+
+add_imports = function(packages, ...) {
+  purrr::walk(packages, add_import, ...)
+}
+
+add_suggests = function(package, ...) {
+  add_package(package, type = "Suggests")
+}
