@@ -1,3 +1,4 @@
+#' @include utils.R
 create_from_template = function(..., target_name) {
   check_pipework()
   in_file = template_file(...)
