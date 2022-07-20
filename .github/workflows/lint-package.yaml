@@ -18,9 +18,9 @@ jobs:
           use-public-rspm: true
 
       - name: Install lintr
-        run: install.packages("lintr")
+        run: install.packages(c("devtools", "lintr"))
         shell: Rscript {0}
 
       - name: Lint package
-        run: lintr::lint_package()
+        run: devtools::load_all(); lintr::lint_package()
         shell: Rscript {0}
