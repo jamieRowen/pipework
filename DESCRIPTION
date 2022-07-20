@@ -21,4 +21,12 @@ Suggests:
     purrr,
     usethis
 Config/testthat/edition: 3
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0
+Collate: 
+    'utils.R'
+    'create.R'
+    'get.R'
+    'global_imports.R'
+    'lay.R'
+    'lock.R'
+    'reexports.R'
