@@ -1,5 +1,6 @@
 # pipework (0.0.1.9000)
 
+- feat: Functionality to setup logging for pipework project `add_logging()`
 - feat: Functionality to create location for routes
 - test: Above feature
 - feat: Functionality to copy templates to new package
