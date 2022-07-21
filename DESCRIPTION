@@ -19,7 +19,9 @@ Suggests:
     withr,
     testthat (>= 3.0.0),
     purrr,
-    usethis
+    usethis,
+    logger,
+    stringr
 Config/testthat/edition: 3
 RoxygenNote: 7.2.0
 Collate: 
