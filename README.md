@@ -28,3 +28,12 @@ This has the effect of adding the location inside the `inst/` directory of your 
 for adding routes. Adding source code to your `R/` directory that will
 allow you to build a plumber object from those routes and add necessary
 dependencies to your DESRIPTION file.
+
+## Logging
+
+You can add a [{logger}](https://daroczig.github.io/logger/) to your project with `add_logging()`.
+
+This gives the tools to set up and use a logger.
+`setup_logger()` in your entrypoint to the API will set a directory (default "./API_logs") with rotating log files and a custom JSON layout for those log files.
+
+The logger setup also provides `with_log_handle(expr)` which can be used internally to log any expressions.
