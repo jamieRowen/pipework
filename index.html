@@ -55,9 +55,25 @@
   </div>
 </nav><div class="container template-home">
 <div class="row">
-  <main id="main" class="col-md-9">
-Code generator for dependency-free 'Plumber' applications in the form
-    of packages.
+  <main id="main" class="col-md-9"><div class="section level1">
+<div class="page-header"><h1 id="pipework">Pipework<a class="anchor" aria-label="anchor" href="#pipework"></a>
+</h1></div>
+<p>A package for creating <a href="https://www.rplumber.io/" class="external-link">Plumber</a> APIs as packages.</p>
+<p>This package is very much inspired by <a href="https://leprechaun.opifex.org/#/" class="external-link">{leprechaun}</a> and <a href="https://thinkr-open.github.io/golem/" class="external-link">{golem}</a>. The aim is to allow a plumber application to be contained in a package in order to leverage all of the benefits such as testing and documentation of R code. As such this is just one persons opinion on how a plumber application can be contained within an R package structure.</p>
+<p>Like <code>{leprechaun}</code>, this aims to be a solution that leaves the final package without a dependency on <a href="https://jamierowen.github.io/pipework/">pipework</a>.</p>
+<div class="section level2">
+<h2 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
+</h2>
+<p><a href="https://jamierowen.github.io/pipework/">pipework</a> starts with the assumption that you already have an R package structure in place. I recommend the excellent <a href="https://usethis.r-lib.org" class="external-link">usethis</a> package if you want to instantiate a new package.</p>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Optionally create a package</span></span>
+<span><span class="co"># usethis::create_package(".")</span></span>
+<span></span>
+<span><span class="co"># Start a pipework project</span></span>
+<span><span class="fu">pipework</span><span class="fu">::</span><span class="fu">lay_pipework</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>This has the effect of adding the location inside the <code>inst/</code> directory of your package for adding routes. Adding source code to your <code>R/</code> directory that will allow you to build a plumber object from those routes and add necessary dependencies to your DESRIPTION file.</p>
+</div>
+</div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
