@@ -24,5 +24,5 @@ test_that("build ignore pipework", {
 
 test_that("template_file", {
   expect_error(template_file("R", "fake.R"))
-  expect_type(template_file("R", "_generate_api.R"), "character")
+  expect_type(template_file("R", "generate_api_.R"), "character")
 })

@@ -29,6 +29,15 @@ for adding routes. Adding source code to your `R/` directory that will
 allow you to build a plumber object from those routes and add necessary
 dependencies to your DESRIPTION file.
 
+## Templated files
+
+The files added to your package from the templates inside {pipework} will
+end in an underscore, e.g `"R/generate_api_.R"`. These files are not intended to be modified by a user. Although nothing would prevent you from doing so.
+
+## entrypoint
+
+We can add an entrypoint to run our application by `add_entrypoint()`. This entrypoint script will be a runnable script that would create your plumber object.
+
 ## Logging
 
 You can add a [{logger}](https://daroczig.github.io/logger/) to your project with `add_logging()`.

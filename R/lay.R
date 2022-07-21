@@ -17,7 +17,7 @@ lay_pipework = function() {
   create_lock_file()
 
   cli::cli_h2("Generating code")
-  create_from_template("R", "_generate_api.R")
+  create_from_template("R", "generate_api_.R", target_dir = "R")
 
   cli::cli_h3("Adding dependencies for generated code")
   add_imports(c(
