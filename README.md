@@ -38,6 +38,13 @@ end in an underscore, e.g `"R/generate_api_.R"`. These files are not intended to
 
 We can add an entrypoint to run our application by `add_entrypoint()`. This entrypoint script will be a runnable script that would create your plumber object.
 
+This entrypoint.R file is already in the format that RStudio Connect might expect. To run the API locally
+
+``` R
+api = plumber::pr("entrypoint.R")
+plumber::pr_run(api)
+```
+
 ## Logging
 
 You can add a [{logger}](https://daroczig.github.io/logger/) to your project with `add_logging()`.
