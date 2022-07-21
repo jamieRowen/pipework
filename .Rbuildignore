@@ -12,3 +12,7 @@ docs
 /rsconnect/
 ^\.pipework$
 ^\.github
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
