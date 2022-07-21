@@ -73,6 +73,13 @@
 <span><span class="fu">pipework</span><span class="fu">::</span><span class="fu"><a href="reference/lay_pipework.html">lay_pipework</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p>This has the effect of adding the location inside the <code>inst/</code> directory of your package for adding routes. Adding source code to your <code>R/</code> directory that will allow you to build a plumber object from those routes and add necessary dependencies to your DESRIPTION file.</p>
 </div>
+<div class="section level2">
+<h2 id="logging">Logging<a class="anchor" aria-label="anchor" href="#logging"></a>
+</h2>
+<p>You can add a <a href="https://daroczig.github.io/logger/" class="external-link">{logger}</a> to your project with <code><a href="reference/add_logging.html">add_logging()</a></code>.</p>
+<p>This gives the tools to set up and use a logger. <code>setup_logger()</code> in your entrypoint to the API will set a directory (default “./API_logs”) with rotating log files and a custom JSON layout for those log files.</p>
+<p>The logger setup also provides <code>with_log_handle(expr)</code> which can be used internally to log any expressions.</p>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
