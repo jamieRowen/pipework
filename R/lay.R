@@ -1,3 +1,12 @@
+#' Add package code for API generation
+#'
+#' This is the core function of the pipework package.
+#' Initiate a pipework project in an existing package. If
+#' not currently a package see \code{usethis::use_package()}.
+#' This will add the necessary utilities to generate a plumber
+#' object from a collection of routes in inst/extdata/api/routes.
+#'
+#' @export
 lay_pipework = function() {
   check_package()
   if (is_pipework()) {
