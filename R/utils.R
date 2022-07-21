@@ -1,3 +1,4 @@
+#' @include lock.R
 is_pipework = function() {
   fs::file_exists(LOCK_FILE)
 }

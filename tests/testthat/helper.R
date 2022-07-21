@@ -17,9 +17,12 @@ create_tmp_package = function(envir = parent.frame()) {
 
 with_temp_package = function(envir = parent.frame()) {
   wd = getwd()
+  # active_project = usethis::proj_get()
   withr::defer(setwd(wd), envir = envir)
+  # withr::defer(usethis::proj_activate(active_project), envir = envir)
   pkg = create_tmp_package(envir = envir)
   setwd(pkg)
+  usethis::proj_activate(".")
   return(pkg)
 }
 

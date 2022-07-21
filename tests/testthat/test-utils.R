@@ -15,7 +15,7 @@ test_that("check pipework", {
 test_that("build ignore pipework", {
   dir = with_temp_package()
   create_lock_file()
-  expect_message(build_ignore_pipework())
+  expect_snapshot(build_ignore_pipework())
 
   ignore_file = file.path(dir, ".Rbuildignore")
   x = readLines(ignore_file)
