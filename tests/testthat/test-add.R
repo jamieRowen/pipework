@@ -15,6 +15,14 @@ describe(
       })
       expect_true(file.exists(file.path(ppath, "R", "logger_.R")))
     })
+    it("warns when logging is already present", {
+      ppath = with_temp_package()
+      create_lock_file()
+      add_logging()
+      expect_warning({
+        add_logging()
+      })
+    })
   }
 )
 
@@ -34,6 +42,14 @@ describe(
         add_entrypoint()
       })
       expect_true(file.exists(file.path(ppath, "entrypoint.R")))
+    })
+     it("warns when entrypoint is already present", {
+      ppath = with_temp_package()
+      create_lock_file()
+      add_entrypoint()
+      expect_warning({
+        add_entrypoint()
+      })
     })
   }
 )
