@@ -35,3 +35,25 @@ add_entrypoint = function() {
   create_from_template("R", "basic_entry_.R", target_name = "entrypoint.R")
   add_pipe()
 }
+
+#' Add default logging hooks to your pipework project
+#'
+#' Creates a file in your package source R/hooks_.R which
+#' contains code to register pre and post route logging hooks
+#' to your API.
+#'
+#' @export
+add_hooks = function() {
+  check_pipework()
+  if (has_hooks()) {
+    warning("It looks like this project already has hooks.")
+    return()
+  }
+  if (!has_logging()) {
+    cli::cli_alert_info("Standard hooks require logging")
+    add_logging()
+  }
+  cli::cli_h1("Adding hooks")
+  cli::cli_h2("Generating code")
+  create_from_template("R", "hooks_.R", target_dir = "R")
+}
