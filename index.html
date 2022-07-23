@@ -94,6 +94,12 @@
 <p>This gives the tools to set up and use a logger. <code>setup_logger()</code> in your entrypoint to the API will set a directory (default “./API_logs”) with rotating log files and a custom JSON layout for those log files.</p>
 <p>The logger setup also provides <code>with_log_handle(expr)</code> which can be used internally to log any expressions.</p>
 </div>
+<div class="section level2">
+<h2 id="logging-hooks">Logging hooks<a class="anchor" aria-label="anchor" href="#logging-hooks"></a>
+</h2>
+<p>{pipework} comes with a couple of hooks templated that can be added to your project. These hooks simply log requests and data pre and post routing and whether or not the action was a success.</p>
+<p>To add the hooks to your package source. <code><a href="reference/add_hooks.html">pipework::add_hooks()</a></code></p>
+</div>
 </div>
   </main><aside class="col-md-3"><div class="license">
 <h2 data-toc-skip>License</h2>
