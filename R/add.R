@@ -7,6 +7,10 @@
 #' @export
 add_logging = function() {
   check_pipework()
+  if (has_logging()) {
+    warning("It looks like this project already has logging.")
+    return()
+  }
   cli::cli_h1("Adding logging tools")
   cli::cli_h2("Generating code")
   create_from_template("R", "logger_.R", target_dir = "R")
@@ -30,6 +34,10 @@ add_pipe = function() {
 #' @export
 add_entrypoint = function() {
   check_pipework()
+  if (has_entrypoint()) {
+    warning("It looks like this project already has entrypoint.R")
+    return()
+  }
   cli::cli_h1("Adding API entrypoint")
   cli::cli_h2("Generating code")
   create_from_template("R", "basic_entry_.R", target_name = "entrypoint.R")
