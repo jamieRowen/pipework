@@ -53,3 +53,9 @@ This gives the tools to set up and use a logger.
 `setup_logger()` in your entrypoint to the API will set a directory (default "./API_logs") with rotating log files and a custom JSON layout for those log files.
 
 The logger setup also provides `with_log_handle(expr)` which can be used internally to log any expressions.
+
+## Logging hooks
+
+{pipework} comes with a couple of hooks templated that can be added to your project. These hooks simply log requests and data pre and post routing and whether or not the action was a success.
+
+To add the hooks to your package source. `pipework::add_hooks()`

@@ -2,6 +2,7 @@
 
 export("%>%")
 export(add_entrypoint)
+export(add_hooks)
 export(add_logging)
 export(lay_pipework)
 importFrom(magrittr,"%>%")
