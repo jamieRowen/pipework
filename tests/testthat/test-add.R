@@ -55,6 +55,29 @@ describe(
 )
 
 describe(
+  "add_route()", {
+    it("will error when package is not a pipework project", {
+      expect_error(add_route())
+    })
+    add_lockfile()
+    it("will add the plumber route file if it doesn't exist", {
+
+    })
+    it("will add the R/api_X file if it doesn't exist", {
+
+    })
+    it("will add the R/X file it if doesn't exist", {
+
+    })
+    it("generates get endpoints", {
+
+    })
+    it("generates post endpoints", {
+      
+    })
+  }
+)
+describe(
   "add_hooks()", {
     it("will error when package is not a pipework project", {
       ppath = with_temp_package()
