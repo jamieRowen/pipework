@@ -65,3 +65,19 @@ add_hooks = function() {
   cli::cli_h2("Generating code")
   create_from_template("R", "hooks_.R", target_dir = "R")
 }
+
+add_route(route, method = c("get", "post")) {
+  method = match.arg(method)
+  parts = stringr::str_split(route, "/")[[1]]
+  
+  # final part is the name of the endpoint
+  path_length = as.character(length(parts))
+  switch(
+    path_length,
+    "0" = route_error(),
+    "1" = base_route(parts, method),
+    "2" = file_route(parts, method),
+    nested_file_route(parts, method)
+  )
+}
+

@@ -75,8 +75,18 @@ describe(
     it("generates post endpoints", {
       
     })
+    it("generates @get is_alive", {
+
+    })
+    it("generates @get test/is_alive", {
+
+    })
+    it("generates @get nested/test/is_alive", {
+      
+    })
   }
 )
+
 describe(
   "add_hooks()", {
     it("will error when package is not a pipework project", {
