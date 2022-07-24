@@ -56,12 +56,26 @@ describe(
 
 describe(
   "add_route()", {
+    ppath = with_temp_package()
     it("will error when package is not a pipework project", {
       expect_error(add_route())
     })
-    add_lockfile()
-    it("will add the plumber route file if it doesn't exist", {
-
+    create_lock_file()
+    it("will add the plumber route file if it doesn't exist for a base route", {
+      add_route("test")
+      expect_true(file.exists("inst/extdata/api/routes/_.R"))
+    })
+    it("will add the plumber route file if it doesn't exist for a file route", {
+      add_route("test/is_alive")
+      expect_true(file.exists("inst/extdata/api/routes/test.R"))
+    })
+    it("will add the plumber route file if it doesn't exist for a nested file route", {
+      add_route("nested/test/is_alive")
+      expect_true(file.exists("inst/extdata/api/routes/nested/test.R"))
+    })
+    it("will add the plumber route file if it doesn't exist for a deep nested file route", {
+      add_route("nested/twice/test/is_alive")
+      expect_true(file.exists("inst/extdata/api/routes/nested/twice/test.R"))
     })
     it("will add the R/api_X file if it doesn't exist", {
 
