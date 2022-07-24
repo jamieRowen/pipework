@@ -66,11 +66,11 @@ add_hooks = function() {
   create_from_template("R", "hooks_.R", target_dir = "R")
 }
 
-add_route(route, method = c("get", "post")) {
+#' @export
+add_route = function(route, method = c("get", "post")) {
+  check_pipework()
   method = match.arg(method)
   parts = stringr::str_split(route, "/")[[1]]
-  
-  # final part is the name of the endpoint
   path_length = as.character(length(parts))
   switch(
     path_length,
@@ -80,4 +80,3 @@ add_route(route, method = c("get", "post")) {
     nested_file_route(parts, method)
   )
 }
-

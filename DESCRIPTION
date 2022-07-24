@@ -34,4 +34,5 @@ Collate:
     'has.R'
     'lay.R'
     'reexports.R'
+    'route.R'
 URL: https://jamierowen.github.io/pipework/
