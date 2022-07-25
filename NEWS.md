@@ -1,5 +1,6 @@
 # pipework (0.0.1.9000)
 
+- feat: Functionality to add new routes `add_route()`
 - feat: Functionality to add hooks to pipework project `add_hooks()`
 - feat: Functionality to add entrypoint to root of project `add_entrypoint()`
 - feat: Functionality to setup logging for pipework project `add_logging()`
