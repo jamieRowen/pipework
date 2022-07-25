@@ -62,10 +62,10 @@ nested_file_route = function(route_parts, method) {
   endpoint_name = route_parts[length(route_parts)]
   fpath = do.call(file.path, as.list(route_parts[-length(route_parts)]))
   write_inst_route_file(fpath, method, endpoint_name)
-  write_api_file(c(
-    "R",
-    paste0(route_parts[-length(route_parts)], collapse = "_")
-  ), endpoint_name)
+  write_api_file(
+    paste0(route_parts[-length(route_parts)], collapse = "_"),
+    endpoint_name
+  )
   write_r_src(endpoint_name)
 }
 
@@ -89,7 +89,7 @@ write_file = function(str, filename) {
   }
   cli::cli_alert_info(msg)
   cli::cli_alert_info(paste0("Adding\n\"\n", str, "\n\""))
-  write(str, file = filename, append = append, sep = "\n")
+  write(str, file = filename, append = append)
 }
 
 write_inst_route_file = function(file_path, method, route_name) {

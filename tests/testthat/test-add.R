@@ -77,8 +77,21 @@ describe(
       add_route("nested/twice/test/is_alive")
       expect_true(file.exists("inst/extdata/api/routes/nested/twice/test.R"))
     })
+    it("will add the R/api_X file if it doesn't exist for a base route", {
+      add_route("test")
+      expect_true(file.exists("R/api_.R"))
+    })
+    it("will add the R/api_X file if it doesn't exist for a file route", {
+      add_route("test/is_alive")
+      expect_true(file.exists("R/api_test.R"))
+    })
+    it("will add the R/api_X file if it doesn't exist for a nested file route", {
+      add_route("nested/test/is_alive")
+      expect_true(file.exists("R/api_nested_test.R"))
+    })
     it("will add the R/api_X file if it doesn't exist", {
-
+      add_route("nested/twice/test/is_alive")
+      expect_true(file.exists("R/api_nested_twice_test.R"))
     })
     it("will add the R/X file it if doesn't exist", {
 
