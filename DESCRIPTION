@@ -10,6 +10,7 @@ License: GPL (>= 2)
 Imports:
     cli,
     fs,
+    glue,
     jsonlite,
     magrittr,
     rlang
