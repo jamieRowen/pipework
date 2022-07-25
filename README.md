@@ -59,3 +59,8 @@ The logger setup also provides `with_log_handle(expr)` which can be used interna
 {pipework} comes with a couple of hooks templated that can be added to your project. These hooks simply log requests and data pre and post routing and whether or not the action was a success.
 
 To add the hooks to your package source. `pipework::add_hooks()`
+
+## New routes
+
+{pipework} allows you to add a new route to your package. The view of this author is that all logic should be testable, as such the annotated plumber route definitions are just exported functions from your package. 
+Adding a route will add/append to 3 files in your package. See the vignette on adding routes for more detail.
